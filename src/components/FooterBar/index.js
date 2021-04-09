@@ -17,6 +17,10 @@ function HeaderBar() {
 						Medium
 					</a>
 
+					<a target="_blank" rel="noreferrer" href="https://github.com/holdfarm">
+						Github
+					</a>
+
 					<a target="_blank" rel="noreferrer" href="https://docs.hold.farm">
 						Documentation
 					</a>
