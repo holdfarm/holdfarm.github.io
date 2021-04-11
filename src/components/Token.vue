@@ -62,7 +62,7 @@
             <p
               class="text-gray-800 text-3xl text-left dark:text-white font-bold my-4"
             >
-              {{ state.totalSupply }} BNB
+              {{ state.totalSupply }} HOLD
             </p>
             <div class="relative w-56 h-2 bg-gray-200 rounded">
               <div
