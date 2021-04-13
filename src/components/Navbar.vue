@@ -81,7 +81,7 @@
         <div class="flex flex-col items-center mt-12 text-center">
           <span class="relative inline-flex w-full md:w-auto">
             <a
-              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x593bdbaf7e65c51f5a35761cc688245a560e6a02"
+              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0827d5140dddac32fe8d1dec2b88d56af31b476d"
               type="button"
               class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
             >
@@ -93,7 +93,7 @@
             >
           </span>
           <a
-            href="https://bscscan.com/address/0x593bdbaf7e65c51f5a35761cc688245a560e6a02"
+            href="https://bscscan.com/address/0x0827d5140dddac32fe8d1dec2b88d56af31b476d"
             class="mt-3 text-sm text-indigo-500"
             >Smart Contract</a
           >
