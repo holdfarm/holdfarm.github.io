@@ -93,7 +93,7 @@
             >
           </span>
           <a
-            href="https://bscscan.com/address/0xb5e1f0264e249a593019f3893bd2272fb79bab05"
+            href="https://bscscan.com/token/0xb5e1f0264e249a593019f3893bd2272fb79bab05"
             class="mt-3 text-sm text-indigo-500"
             >Smart Contract</a
           >
