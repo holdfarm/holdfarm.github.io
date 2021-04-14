@@ -179,7 +179,7 @@ export default defineComponent({
     const state = reactive({
       wbnbBal: 0,
       totalSupply: 0,
-      burnRate: 2,
+      burnRate: 3.00,
       totalMarketCap: 0,
     });
 
