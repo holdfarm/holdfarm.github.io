@@ -43,16 +43,13 @@
 </template>
 
 <script>
-//   TIMELEFT, TIMEAGo, ESTIMATED EXPANSION
 import { defineComponent } from "@vue/composition-api";
 import { ethers } from "ethers";
 import config from "../utils/config.json";
 import moment from "moment";
 
 import holdAbi from "../utils/hold.json";
-// import routerAbi from "../utils/router.json";
 import controllerAbi from "../utils/controller.json";
-// import farmAbi from "../utils/farm.json";
 
 var provider = new ethers.providers.JsonRpcProvider(
   "https://bsc-dataseed.binance.org/"
@@ -63,19 +60,12 @@ const hold = new ethers.Contract(
   holdAbi,
   provider
 );
-// const router = new ethers.Contract(
-//   config.PANCAKE_ROUTER_CONTRACT_ADDRESS,
-//   routerAbi,
-//   provider
-// );
 
 const controller = new ethers.Contract(
   config.CONTROLLER_CONTRACT_ADDRESS,
   controllerAbi,
   provider
 );
-
-// const farm = new ethers.Contract(config.FARM_CONTRACT, farmAbi, provider);
 
 import { onMounted, reactive } from "vue";
 import { formatEther } from "ethers/lib/utils";

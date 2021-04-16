@@ -86,7 +86,6 @@
 </template>
 
 <script>
-//   TVL in LP, TVL in FARM
 import { defineComponent } from "@vue/composition-api";
 import { ethers } from "ethers";
 import config from "../utils/config.json";

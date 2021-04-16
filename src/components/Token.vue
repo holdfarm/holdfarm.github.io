@@ -152,10 +152,11 @@
 import { defineComponent } from "@vue/composition-api";
 import { ethers } from "ethers";
 import config from "../utils/config.json";
+import { onMounted, reactive } from "vue";
+import { formatEther, parseEther } from "ethers/lib/utils";
 
 import holdAbi from "../utils/hold.json";
 import routerAbi from "../utils/router.json";
-// import farmAbi from "../utils/farm.json";
 
 var provider = new ethers.providers.JsonRpcProvider(
   "https://bsc-dataseed.binance.org/"
@@ -171,15 +172,13 @@ const router = new ethers.Contract(
   routerAbi,
   provider
 );
-// const farm = new ethers.Contract(config.FARM_CONTRACT, farmAbi, provider);
-import { onMounted, reactive } from "vue";
-import { formatEther, parseEther } from "ethers/lib/utils";
+
 export default defineComponent({
   setup() {
     const state = reactive({
       wbnbBal: 0,
       totalSupply: 0,
-      burnRate: 3.00,
+      burnRate: 3.0,
       totalMarketCap: 0,
     });
 
