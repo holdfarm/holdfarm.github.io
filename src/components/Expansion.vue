@@ -2,7 +2,7 @@
   <div
     class="container max-w-6xl mb-24 px-10 mx-auto sm:px-20 md:px-32 lg:px-16"
   >
-    <div class="items-center ">
+    <div class="items-center">
       <div
         class="md:p-8 p-6 bg-white shadow-xl rounded-lg flex justify-between dark:bg-gray-800 md:items-center md:flex-row flex-col gap-12"
       >
@@ -31,6 +31,7 @@
           </p>
         </div>
         <button
+          v-if="state.timeLock > 86400"
           @click="expandLP"
           class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
         >
@@ -74,15 +75,13 @@ const controller = new ethers.Contract(
   provider
 );
 
-
 // const farm = new ethers.Contract(config.FARM_CONTRACT, farmAbi, provider);
-
 
 import { onMounted, reactive } from "vue";
 import { formatEther } from "ethers/lib/utils";
 export default defineComponent({
   data() {
-    return { timeLockValbutton : 0 }
+    return { timeLockValbutton: 0 };
   },
 
   setup() {
@@ -90,6 +89,7 @@ export default defineComponent({
       nextHarvest: "",
       oldHarvest: "",
       pendingExpBal: 0,
+      timeLock: 0,
     });
 
     onMounted(async () => {
@@ -101,7 +101,6 @@ export default defineComponent({
         state.timelock = parseInt(timeLockVal);
         state.oldHarvest = moment.unix(parseInt(oldHarvest)).fromNow();
         state.pendingExpBal = formatEther(pendingExp);
-
       } catch (e) {
         console.log(e);
       }
@@ -110,7 +109,13 @@ export default defineComponent({
     const expandLP = async () => {
       await window.ethereum.enable();
       const newProvider = new ethers.providers.Web3Provider(window.ethereum);
+      const { chainId } = await newProvider.getNetwork();
       const signer = newProvider.getSigner();
+
+      if (chainId !== 56) {
+        alert("Switch to Binance Network.");
+        return;
+      }
 
       const controllerActionContract = new ethers.Contract(
         config.CONTROLLER_CONTRACT_ADDRESS,
