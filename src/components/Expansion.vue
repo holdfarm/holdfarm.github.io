@@ -31,7 +31,6 @@
           </p>
         </div>
         <button
-          v-if="timeLock > 30000"
           @click="expandLP"
           class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
         >
@@ -74,10 +73,18 @@ const controller = new ethers.Contract(
   controllerAbi,
   provider
 );
+
+
 // const farm = new ethers.Contract(config.FARM_CONTRACT, farmAbi, provider);
+
+
 import { onMounted, reactive } from "vue";
 import { formatEther } from "ethers/lib/utils";
 export default defineComponent({
+  data() {
+    return { timeLockValbutton : 0 }
+  },
+
   setup() {
     const state = reactive({
       nextHarvest: "",
@@ -89,12 +96,12 @@ export default defineComponent({
       try {
         const oldHarvest = await controller.timeLock();
         const timeLockVal = await controller.timeLocksecs();
-        state.timelock = parseInt(timeLockVal);
-
-        state.oldHarvest = moment.unix(parseInt(oldHarvest)).fromNow();
-
         const pendingExp = await hold.toMint();
+
+        state.timelock = parseInt(timeLockVal);
+        state.oldHarvest = moment.unix(parseInt(oldHarvest)).fromNow();
         state.pendingExpBal = formatEther(pendingExp);
+
       } catch (e) {
         console.log(e);
       }
@@ -104,11 +111,13 @@ export default defineComponent({
       await window.ethereum.enable();
       const newProvider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = newProvider.getSigner();
+
       const controllerActionContract = new ethers.Contract(
         config.CONTROLLER_CONTRACT_ADDRESS,
         controllerAbi,
         signer
       );
+
       await controllerActionContract.harvest({
         gasPrice: 5000000000,
         gasLimit: 1500000,
