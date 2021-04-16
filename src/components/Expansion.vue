@@ -21,7 +21,7 @@
             <p
               class="text-xl md:mb-2 mb-0 dark:text-gray-100 flex items-center increase"
             >
-              Last Expansion
+              Last Token Buyback
             </p>
           </div>
           <p
