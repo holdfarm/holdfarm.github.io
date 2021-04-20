@@ -1,6 +1,5 @@
 <template>
   <Navbar />
-  <Icons />
   <Token />
   <Tvl />
   <Expansion />
@@ -13,7 +12,7 @@ import Footer from "./components/Footer";
 import Token from "./components/Token";
 import Tvl from "./components/Tvl";
 import Expansion from "./components/Expansion";
-import Icons from "./components/Icons";
+
 
 export default {
   name: "App",
@@ -23,7 +22,6 @@ export default {
     Token: Token,
     Tvl: Tvl,
     Expansion: Expansion,
-    Icons: Icons,
   },
 };
 </script>
