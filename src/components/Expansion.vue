@@ -1,42 +1,42 @@
 <template>
-  <div
-    class="container max-w-6xl mb-24 px-10 mx-auto sm:px-20 md:px-32 lg:px-16"
-  >
-    <div class="items-center">
-      <div
-        class="md:p-8 p-6 bg-white shadow-xl rounded-lg flex justify-between dark:bg-gray-800 md:items-center md:flex-row flex-col gap-12"
-      >
-        <div>
-          <span class="text-bold text-gray-700 dark:text-gray-400 block">
-            ESTIMATED EXPANSION
-          </span>
-          <span
-            class="text-yellow-500 text-4xl md:text-4xl mt-2 font-black block"
-          >
-            {{ state.pendingExpBal }} HOLD
-          </span>
-        </div>
-        <div class="self-end">
-          <div class="md:text-right text-left md:block">
-            <p
-              class="text-xl md:mb-2 mb-0 dark:text-gray-100 flex items-center increase"
+  <div class="bg-gray-100 py-20 mb-24">
+    <div class=" container mx-auto sm:px-20 md:px-32 lg:px-16">
+      <div class="items-center">
+        <div
+          class="md:p-8 p-6 flex justify-between md:items-center md:flex-row flex-col gap-12"
+        >
+          <div>
+            <span class="text-bold text-gray-700 dark:text-gray-400 block">
+              ESTIMATED EXPANSION
+            </span>
+            <span
+              class="text-yellow-500 text-4xl md:text-4xl mt-2 font-black block"
             >
-              Last Token Buyback
+              {{ state.pendingExpBal }} HOLD
+            </span>
+          </div>
+          <div class="self-end">
+            <div class="md:text-right text-left md:block">
+              <p
+                class="text-xl md:mb-2 mb-0 dark:text-gray-100 flex items-center increase"
+              >
+                Last Token Buyback
+              </p>
+            </div>
+            <p
+              class="text-lg text-gray-600 md:text-right text-left dark:text-gray-400 md:block inline-block md:mb-0"
+            >
+              ({{ state.oldHarvest }})
             </p>
           </div>
-          <p
-            class="text-lg text-gray-600 md:text-right text-left dark:text-gray-400 md:block inline-block md:mb-0"
+          <button
+            v-if="state.timeLockVal > 86400"
+            @click="expandLP"
+            class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
-            ({{ state.oldHarvest }})
-          </p>
+            Expand
+          </button>
         </div>
-        <button
-          v-if="state.timeLockVal > 86400"
-          @click="expandLP"
-          class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-        >
-          Expand
-        </button>
       </div>
     </div>
   </div>
