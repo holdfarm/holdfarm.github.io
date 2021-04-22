@@ -23,7 +23,7 @@
             class="mx-auto mt-5 text-gray-500 md:mt-12 md:max-w-lg md:text-center lg:text-lg"
           >
             generates passive income by allocating assets to other crypto farms,
-            combining and picking best farming vaults. Automtic token buyback
+            combining and picking best farming vaults. Automatic token buyback
             everyday from farming profits.
           </div>
           <div class="flex flex-col items-center mt-12 text-center">
