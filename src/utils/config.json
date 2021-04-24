@@ -9,5 +9,5 @@
   "FARM_CONTRACT": "0x0895196562C7868C5Be92459FaE7f877ED450452",
   "network": "Binance Smart Chain",
   "chainID": 56,
-  "gasLimit": 900000
+  "gasLimit": 2000000
 }
