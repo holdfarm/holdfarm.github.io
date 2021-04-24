@@ -34,7 +34,7 @@
                 ></path>
               </svg>
               <span class="text-3xl font-medium text-gray-500">
-                {{ state.lpLocked }} CAKE (LP)
+                {{ state.lpLocked }} BNB
               </span>
             </li>
             <li class="flex items-center py-2 space-x-4 xl:py-3">
@@ -53,7 +53,7 @@
                 ></path>
               </svg>
               <span class="text-3xl font-medium text-gray-500">
-                {{ state.tvlBalance }} CAKE (FARM)
+                {{ state.tvlBalance }} CAKE 
               </span>
             </li>
           </ul>
@@ -102,7 +102,7 @@ export default defineComponent({
       try {
         const amountsOut = await router.getAmountsOut(parseEther("1.0"), [
           config.HOLD_CONTRACT_ADDRESS,
-          config.CAKE_ADDRESS,
+          config.WBNB_ADDRESS,
         ]);
 
         wbnbBal = parseFloat(formatEther(amountsOut[1])).toFixed(4);

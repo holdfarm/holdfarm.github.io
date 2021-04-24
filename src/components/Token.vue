@@ -27,7 +27,7 @@
             <p
               class="text-gray-800 text-3xl text-left dark:text-white font-bold my-4"
             >
-              {{ state.wbnbBal }} CAKE
+              {{ state.wbnbBal }} BNB
             </p>
             <div class="relative w-56 h-2 bg-gray-200 rounded">
               <div
@@ -135,7 +135,7 @@
             <p
               class="text-gray-800 text-3xl text-left dark:text-white font-bold my-4"
             >
-              {{ state.totalMarketCap }} CAKE
+              {{ state.totalMarketCap }} BNB
             </p>
             <div class="relative w-56 h-2 bg-gray-200 rounded">
               <div
@@ -189,7 +189,7 @@ export default defineComponent({
       try {
         const amountsOut = await router.getAmountsOut(parseEther("1.0"), [
           config.HOLD_CONTRACT_ADDRESS,
-          config.CAKE_ADDRESS,
+          config.WBNB_ADDRESS,
         ]);
 
         state.wbnbBal = parseFloat(formatEther(amountsOut[1])).toFixed(3);
