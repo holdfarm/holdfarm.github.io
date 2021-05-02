@@ -21,8 +21,8 @@
             <div class="py-4">
               <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
                 <div class="flex items-center">
-                  <p class="text-md text-gray-700 dark:text-gray-50 ml-2">
-                    TVL
+                  <p class="text-2xl text-gray-700 dark:text-gray-50 ml-2">
+                    Locked In LP
                   </p>
                 </div>
                 <div class="flex flex-col justify-start">
@@ -42,8 +42,8 @@
             <div class="py-4">
               <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
                 <div class="flex items-center">
-                  <p class="text-md text-gray-700 dark:text-gray-50 ml-2">
-                    TVL
+                  <p class="text-2xl text-gray-700 dark:text-gray-50 ml-2">
+                    Locked In Farms
                   </p>
                 </div>
 
