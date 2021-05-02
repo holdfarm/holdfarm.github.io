@@ -19,9 +19,11 @@
         <div class="w-full mb-8 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
           <div class="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
             <div class="py-4">
-              <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
+              <div
+                class="shadow-lg rounded-2xl p-4 bg-white-100 dark:bg-gray-800"
+              >
                 <div class="flex items-center">
-                  <p class="text-2xl text-gray-700 dark:text-gray-50 ml-2">
+                  <p class="text-2xl text-indigo-700 dark:text-gray-50 ml-2">
                     Locked In LP
                   </p>
                 </div>
@@ -31,18 +33,13 @@
                   >
                     {{ state.lpLocked }} BNB
                   </p>
-                  <div class="relative h-2 bg-gray-200 rounded">
-                    <div
-                      class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
-                    ></div>
-                  </div>
                 </div>
               </div>
             </div>
             <div class="py-4">
-              <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
+              <div class="shadow-lg rounded-2xl p-4 bg-white-100 dark:bg-gray-800">
                 <div class="flex items-center">
-                  <p class="text-2xl text-gray-700 dark:text-gray-50 ml-2">
+                  <p class="text-2xl text-indigo-700 dark:text-gray-50 ml-2">
                     Locked In Farms
                   </p>
                 </div>
@@ -53,11 +50,6 @@
                   >
                     {{ state.tvlBalance }} CAKE
                   </p>
-                  <div class="relative h-2 bg-gray-200 rounded">
-                    <div
-                      class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
-                    ></div>
-                  </div>
                 </div>
               </div>
             </div>
