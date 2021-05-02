@@ -53,7 +53,7 @@
                 ></path>
               </svg>
               <span class="text-3xl font-medium text-gray-500">
-                {{ state.tvlBalance }} CAKE 
+                {{ state.tvlBalance }} CAKE
               </span>
             </li>
           </ul>
@@ -118,7 +118,7 @@ export default defineComponent({
 
       state.tvlBalance = parseFloat(formatEther(cakeBal)).toFixed(4);
 
-      const bal = await hold.balanceOf({ blockNumber: 6994195 }, config.PAIR_ADDRESS);
+      const bal = await hold.balanceOf(config.PAIR_ADDRESS);
       const lpLocked = formatEther(bal);
 
       state.lpLocked = parseFloat(2 * lpLocked * wbnbBal).toFixed(4);
