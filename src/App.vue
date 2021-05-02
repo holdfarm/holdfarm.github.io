@@ -1,9 +1,11 @@
 <template>
-  <Navbar />
-  <Token />
-  <Tvl />
-  <Expansion />
-  <Footer />
+  <div>
+    <Navbar />
+    <Token />
+    <Tvl />
+    <Expansion />
+    <Footer />
+  </div>
 </template>
 
 <script>
@@ -12,7 +14,6 @@ import Footer from "./components/Footer";
 import Token from "./components/Token";
 import Tvl from "./components/Tvl";
 import Expansion from "./components/Expansion";
-
 
 export default {
   name: "App",
@@ -25,3 +26,4 @@ export default {
   },
 };
 </script>
+
