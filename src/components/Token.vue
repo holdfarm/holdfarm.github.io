@@ -63,7 +63,7 @@
               <p
                 class="text-gray-800 text-3xl text-left dark:text-white font-bold my-4"
               >
-                {{ (state.wbnbBal * state.busdX).toFixed(3) }} BUSD
+                {{ (state.wbnbBal * state.busdX).toFixed(6) }} BUSD
               </p>
               <div class="relative w-56 h-2 bg-gray-200 rounded">
                 <div
@@ -146,8 +146,6 @@
           </div>
         </div>
 
-   
-
         <div class="py-4">
           <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
             <div class="flex items-center">
@@ -209,9 +207,7 @@
               <p
                 class="text-gray-800 text-3xl text-left dark:text-white font-bold my-4"
               >
-                {{
-                  (state.toMint * state.wbnbBal * state.busdX).toFixed(3)
-                }}
+                {{ (state.toMint * state.wbnbBal * state.busdX).toFixed(3) }}
                 BUSD
               </p>
               <div class="relative w-56 h-2 bg-gray-200 rounded">
@@ -223,9 +219,7 @@
           </div>
         </div>
 
-
-
-             <div class="py-4">
+        <div class="py-4">
           <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
             <div class="flex items-center">
               <span class="bg-green-500 p-2 h-4 w-4 rounded-full relative">
@@ -261,7 +255,6 @@
           </div>
         </div>
 
-
         <div class="py-4">
           <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
             <div class="flex items-center">
@@ -280,14 +273,14 @@
                 </svg>
               </span>
               <p class="text-md text-gray-700 dark:text-gray-50 ml-2">
-                TRANSFER BURN 
+                TRANSFER BURN
               </p>
             </div>
             <div class="flex flex-col justify-start">
               <p
                 class="text-gray-800 text-3xl text-left dark:text-white font-bold my-4"
               >
-              {{ state.burnRate }} %
+                {{ state.burnRate }} %
               </p>
               <div class="relative w-56 h-2 bg-gray-200 rounded">
                 <div
