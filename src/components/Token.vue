@@ -29,7 +29,7 @@
               >
                 {{ state.wbnbBal }} BNB
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
                 ></div>
@@ -65,7 +65,7 @@
               >
                 {{ (state.wbnbBal * state.busdX).toFixed(6) }} BUSD
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-blue-500 w-2/3"
                 ></div>
@@ -101,7 +101,7 @@
               >
                 {{ state.totalMarketCap }} BNB
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
                 ></div>
@@ -137,7 +137,7 @@
               >
                 {{ (state.totalMarketCap * state.busdX).toFixed(3) }} BUSD
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-blue-500 w-2/3"
                 ></div>
@@ -173,7 +173,7 @@
               >
                 {{ state.toMint }} HOLD
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
                 ></div>
@@ -210,7 +210,7 @@
                 {{ (state.toMint * state.wbnbBal * state.busdX).toFixed(3) }}
                 BUSD
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-blue-500 w-2/3"
                 ></div>
@@ -246,7 +246,7 @@
               >
                 {{ state.totalSupply }} HOLD
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
                 ></div>
@@ -282,7 +282,7 @@
               >
                 {{ state.burnRate }} %
               </p>
-              <div class="relative w-56 h-2 bg-gray-200 rounded">
+              <div class="relative h-2 bg-gray-200 rounded">
                 <div
                   class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
                 ></div>

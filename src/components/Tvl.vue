@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20">
+  <section class="py-16">
     <div
       class=" items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16"
     >
@@ -17,18 +17,51 @@
           </div>
         </div>
         <div class="w-full mb-8 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
-          <ul>
-            <li class="flex items-center py-2 space-x-4 xl:py-3">
-              <span class="text-5xl font-medium text-gray-500">
-                {{ state.lpLocked }} BNB
-              </span>
-            </li>
-            <li class="flex items-center py-2 space-x-4 xl:py-3">
-              <span class="text-5xl font-medium text-gray-500">
-                {{ state.tvlBalance }} CAKE
-              </span>
-            </li>
-          </ul>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
+            <div class="py-4">
+              <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
+                <div class="flex items-center">
+                  <p class="text-md text-gray-700 dark:text-gray-50 ml-2">
+                    TVL
+                  </p>
+                </div>
+                <div class="flex flex-col justify-start">
+                  <p
+                    class="text-gray-800 text-5xl text-left dark:text-white font-bold my-4"
+                  >
+                    {{ state.lpLocked }} BNB
+                  </p>
+                  <div class="relative h-2 bg-gray-200 rounded">
+                    <div
+                      class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-4">
+              <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
+                <div class="flex items-center">
+                  <p class="text-md text-gray-700 dark:text-gray-50 ml-2">
+                    TVL
+                  </p>
+                </div>
+
+                <div class="flex flex-col justify-start">
+                  <p
+                    class="text-gray-800 text-5xl text-left dark:text-white font-bold my-4"
+                  >
+                    {{ state.tvlBalance }} CAKE
+                  </p>
+                  <div class="relative h-2 bg-gray-200 rounded">
+                    <div
+                      class="absolute top-0 h-2  left-0 rounded bg-green-500 w-2/3"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
