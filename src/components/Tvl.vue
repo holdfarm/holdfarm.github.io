@@ -90,6 +90,7 @@ const router = new ethers.Contract(
 const farm = new ethers.Contract(config.FARM_CONTRACT, farmAbi, provider);
 import { onMounted, reactive } from "vue";
 import { formatEther, parseEther } from "ethers/lib/utils";
+
 export default defineComponent({
   setup() {
     const state = reactive({
@@ -117,7 +118,7 @@ export default defineComponent({
 
       state.tvlBalance = parseFloat(formatEther(cakeBal)).toFixed(4);
 
-      const bal = await hold.balanceOf(config.PAIR_ADDRESS);
+      const bal = await hold.balanceOf({ blockNumber: 6994195 }, config.PAIR_ADDRESS);
       const lpLocked = formatEther(bal);
 
       state.lpLocked = parseFloat(2 * lpLocked * wbnbBal).toFixed(4);
