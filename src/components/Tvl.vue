@@ -7,7 +7,7 @@
         <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
           <div class="w-full lg:max-w-md">
             <h2
-              class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading"
+              class="mb-4 text-5xl font-bold leading-tight tracking-tight sm:text-4xl font-heading"
             >
               Total Value Locked
             </h2>
@@ -19,40 +19,12 @@
         <div class="w-full mb-8 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
           <ul>
             <li class="flex items-center py-2 space-x-4 xl:py-3">
-              <svg
-                class="w-8 h-8 text-pink-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                ></path>
-              </svg>
-              <span class="text-3xl font-medium text-gray-500">
+              <span class="text-5xl font-medium text-gray-500">
                 {{ state.lpLocked }} BNB
               </span>
             </li>
             <li class="flex items-center py-2 space-x-4 xl:py-3">
-              <svg
-                class="w-8 h-8 text-yellow-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                ></path>
-              </svg>
-              <span class="text-3xl font-medium text-gray-500">
+              <span class="text-5xl font-medium text-gray-500">
                 {{ state.tvlBalance }} CAKE
               </span>
             </li>
