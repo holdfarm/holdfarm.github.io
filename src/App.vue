@@ -1,6 +1,7 @@
 <template>
   <div>
     <Navbar />
+    <apy />
     <Token />
     <Tvl />
     <Expansion />
@@ -13,6 +14,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Token from "./components/Token";
 import Tvl from "./components/Tvl";
+import apy from "./components/apy";
 import Expansion from "./components/Expansion";
 
 export default {
@@ -23,7 +25,7 @@ export default {
     Token: Token,
     Tvl: Tvl,
     Expansion: Expansion,
+    apy: apy,
   },
 };
 </script>
-
