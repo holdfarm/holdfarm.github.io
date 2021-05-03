@@ -23,6 +23,7 @@
 <script>
 import { onMounted, reactive } from "vue";
 import { defineComponent } from "@vue/composition-api";
+import axios from "axios";
 
 export default defineComponent({
   setup() {
@@ -32,34 +33,22 @@ export default defineComponent({
 
     onMounted(async () => {
       try {
-        return fetch(
-          "https://thingproxy.freeboard.io/fetch/https://api.holdfarm.workers.dev/",
-          {
-            method: "get",
-            headers: {
-              "content-type": "application/json",
-            },
-          }
-        )
-          .then((res) => {
-            if (!res.ok) {
-              // create error instance with HTTP status text
-              const error = new Error(res.statusText);
-              error.json = res.json();
-              throw error;
-            }
+        axios
+          .get("https://api.holdfarm.workers.dev/")
+          .then(function(response) {
+            // handle success
+            console.log(response.data);
 
-            return res.json();
+            state.apy = response.data.apy.toFixed(3);
           })
-          .then((json) => {
-            // set the response data
-            console.log("loading APY");
-            console.log(json);
+          .catch(function(error) {
+            console.log(error);
+          })
+          .then(function() {
+            // always executed
+          });
 
-            state.apy = json.apy.toFixed(3);
-          })
-          .catch(() => {})
-          .then(() => {});
+  
       } catch (e) {
         console.log(e);
       }
