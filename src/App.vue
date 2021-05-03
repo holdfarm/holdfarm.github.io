@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar />
-    <apy />
     <Token />
+    <apy />
     <Tvl />
     <Expansion />
     <Footer />

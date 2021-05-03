@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="bg-gray-100">
+    <section class="bg-white">
       <div
         class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
       >

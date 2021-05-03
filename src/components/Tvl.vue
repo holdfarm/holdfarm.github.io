@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16">
+  <section class="bg-gray-100 py-16">
     <div
       class=" items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16"
     >
@@ -20,7 +20,7 @@
           <div class="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
             <div class="py-4">
               <div
-                class="shadow-lg rounded-2xl p-4 bg-white-100 dark:bg-gray-800"
+                class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800"
               >
                 <div class="flex items-center">
                   <p class="text-2xl text-indigo-700 dark:text-gray-50 ml-2">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="flex flex-col justify-start">
                   <p
-                    class="text-gray-800 text-5xl text-left dark:text-white font-bold my-4"
+                    class="text-gray-800 text-5xl text-left  font-bold my-4"
                   >
                     {{ state.lpLocked }} BNB
                   </p>
@@ -37,7 +37,7 @@
               </div>
             </div>
             <div class="py-4">
-              <div class="shadow-lg rounded-2xl p-4 bg-white-100 dark:bg-gray-800">
+              <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
                 <div class="flex items-center">
                   <p class="text-2xl text-indigo-700 dark:text-gray-50 ml-2">
                     Locked In Farms
@@ -46,7 +46,7 @@
 
                 <div class="flex flex-col justify-start">
                   <p
-                    class="text-gray-800 text-5xl text-left dark:text-white font-bold my-4"
+                    class="text-gray-800 text-5xl text-left  font-bold my-4"
                   >
                     {{ state.tvlBalance }} CAKE
                   </p>
