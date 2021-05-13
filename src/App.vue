@@ -1,6 +1,7 @@
 <template>
   <div>
     <Navbar />
+    <game />
     <Token />
     <apy />
     <Tvl />
@@ -16,6 +17,7 @@ import Token from "./components/Token";
 import Tvl from "./components/Tvl";
 import apy from "./components/apy";
 import Expansion from "./components/Expansion";
+import game from "./components/game";
 
 export default {
   name: "App",
@@ -25,7 +27,7 @@ export default {
     Token: Token,
     Tvl: Tvl,
     Expansion: Expansion,
-    apy: apy,
+    apy: apy, game: game,
   },
 };
 </script>
