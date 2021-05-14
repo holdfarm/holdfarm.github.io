@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 py-16">
+  <section class="bg-blue-100 py-16">
     <div
       class=" items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16"
     >
@@ -55,6 +55,7 @@ import { defineComponent } from "@vue/composition-api";
 import { ethers } from "ethers";
 import abi from "../assets/game.json";
 import holdAbi from "../utils/hold.json";
+import { parseEther } from "ethers/lib/utils";
 
 var provider = new ethers.providers.JsonRpcProvider(
   "https://bsc-dataseed.binance.org/"
@@ -76,8 +77,12 @@ export default defineComponent({
   },
   methods: {
     async play(betcase) {
-      if (this.betamount < this.maxbet) {
-        let betamount = this.betamount;
+
+
+      if (this.betamount < 1) {
+        let betamount = parseEther(this.betamount.toString());
+console.log('xxxxx') 
+console.log(betamount)
 
         await window.ethereum.enable();
 
@@ -98,12 +103,13 @@ export default defineComponent({
 
         try {
           const temp2 = await gameset.bet(betcase, betamount);
+
           console.log(temp2);
         } catch (e) {
           if (e.code == -32603) {
             const temp1 = await hold.approve(
               "0xa6dc7e399f7bafb7dd72f8306b90e95ddac981c1",
-              betamount
+              parseEther("1000")
             );
             console.log(temp1);
           }
