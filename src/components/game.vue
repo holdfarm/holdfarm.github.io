@@ -66,15 +66,12 @@ export default defineComponent({
   },
   async mounted() {
     const temp2 = await game.maxbet();
-    this.maxbet = (temp2.toString() / 10000000000000000).toFixed(4);
+    this.maxbet = (temp2.toString() / 10000000000000000).toFixed(4) * 0.9;
   },
   methods: {
     async play(betcase) {
-      let betamount = parseEther(
-        Math.min(this.betamount, this.maxbet).toString()
-      );
-      console.log("xxxxx");
-      console.log(betamount);
+      let tempamount = Math.min(this.betamount, this.maxbet);
+      let betamount = parseEther(tempamount.toString());
 
       await window.ethereum.enable();
 
