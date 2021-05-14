@@ -66,7 +66,7 @@ export default defineComponent({
   },
   async mounted() {
     const temp2 = await game.maxbet();
-    this.maxbet = (temp2.toString() / 10000000000000000).toFixed(4) * 0.9;
+    this.maxbet = (temp2.toString() / 1000000000000000000).toFixed(4) * 0.9;
   },
   methods: {
     async play(betcase) {
