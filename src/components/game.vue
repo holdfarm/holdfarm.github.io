@@ -3,9 +3,9 @@
     <div
       class=" items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16"
     >
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-6 gap-4">
         <div>
-          <div class="mb-6">
+         
             <label class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
               >Bet Amount
             </label>
@@ -17,7 +17,7 @@
               required
               class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
             />
-          </div>
+        
         </div>
         <div>
           <label class="block mb-2 text-sm text-gray-600 dark:text-gray-400">
@@ -25,26 +25,30 @@
           </label>
           {{ maxbet }}
         </div>
-      </div>
-      <div>
-        <button
-          class=" px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-          @click="play(2)"
-        >
-          Play 2X
-        </button>
-        <button
-          class=" px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-          @click="play(24)"
-        >
-          Play 4X
-        </button>
-        <button
-          class=" px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-          @click="play(10)"
-        >
-          Play 10X
-        </button>
+        <div>    
+          <button
+            @click="play(2)"
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Play 2X
+          </button>
+        </div>
+        <div>
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            @click="play(24)"
+          >
+            Play 4X
+          </button>
+        </div>
+        <div>
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            @click="play(10)"
+          >
+            Play 10X
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -77,12 +81,10 @@ export default defineComponent({
   },
   methods: {
     async play(betcase) {
-
-
       if (this.betamount < 1) {
         let betamount = parseEther(this.betamount.toString());
-console.log('xxxxx') 
-console.log(betamount)
+        console.log("xxxxx");
+        console.log(betamount);
 
         await window.ethereum.enable();
 
