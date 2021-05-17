@@ -92,7 +92,7 @@ export default defineComponent({
 
       try {
         const temp2 = await gameset.bet(betcase, betamount, {
-          gasLimit: 2000000,
+          gasLimit: 1000000,
         });
 
         console.log(temp2);
