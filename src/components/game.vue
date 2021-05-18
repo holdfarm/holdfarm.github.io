@@ -78,15 +78,32 @@ export default defineComponent({
       const newProvider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = newProvider.getSigner();
 
-      const gameset = new ethers.Contract(
-        "0xa6dc7e399f7bafb7dd72f8306b90e95ddac981c1",
-        abi,
-        signer
-      );
-
       const hold = new ethers.Contract(
         "0xb5e1f0264e249a593019f3893bd2272fb79bab05",
         holdAbi,
+        signer
+      );
+
+      const temp11 = await hold.allowance(
+        window.ethereum.selectedAddress,
+        "0xa6dc7e399f7bafb7dd72f8306b90e95ddac981c1"
+      );
+
+      if (10000000000000000000 < temp11.toString()) {
+
+
+        const temp1 = await hold.approve(
+          "0xa6dc7e399f7bafb7dd72f8306b90e95ddac981c1",
+          parseEther("10000")
+        );
+        console.log(temp1);
+      }else{
+        console.log('allowance Ok')
+      }
+
+      const gameset = new ethers.Contract(
+        "0xa6dc7e399f7bafb7dd72f8306b90e95ddac981c1",
+        abi,
         signer
       );
 
@@ -97,13 +114,7 @@ export default defineComponent({
 
         console.log(temp2);
       } catch (e) {
-        if (e.code == -32603) {
-          const temp1 = await hold.approve(
-            "0xa6dc7e399f7bafb7dd72f8306b90e95ddac981c1",
-            parseEther("1000")
-          );
-          console.log(temp1);
-        }
+        console.log(e);
       }
     },
   },
