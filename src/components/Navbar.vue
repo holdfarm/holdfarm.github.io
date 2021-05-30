@@ -22,9 +22,7 @@
           <div
             class="mx-auto mt-5 text-gray-500 md:mt-12 md:max-w-lg md:text-center lg:text-lg"
           >
-            generates passive income by allocating assets to other crypto farms,
-            combining and picking best farming vaults. Automatic token buyback
-            everyday from farming profits.
+           Hold Farm generates passive income by allocating assets to the most profitable crypto farm, no manual staking is required Holders just need to hold $HOLD tokens in their wallets. Automatic token buyback every day from farming profits.
           </div>
           <div class="flex flex-col items-center mt-12 text-center">
             <span class="relative inline-flex w-full md:w-auto">
